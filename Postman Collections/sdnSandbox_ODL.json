@@ -1,0 +1,349 @@
+{
+  "variables": [],
+  "info": {
+    "name": "sdnSandbox ODL",
+    "_postman_id": "1212841-1369e7e9-082e-4da0-98c4-2a2489c9f5c3",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "_postman_id": "1212841-10ceae66-c9eb-2305-5d08-b045f51f7fb3",
+      "name": "Successful Device Add",
+      "request": {
+        "url": "http://10.1.255.136:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/new-netconf-device",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n   <node-id>new-netconf-device</node-id>\r\n   <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.0.255.2</host>\r\n   <port xmlns=\"urn:opendaylight:netconf-node-topology\">22</port>\r\n   <username xmlns=\"urn:opendaylight:netconf-node-topology\">netconfadmin</username>\r\n   <password xmlns=\"urn:opendaylight:netconf-node-topology\">$netconf!@admin</password>\r\n   <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n   <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">0</keepalive-delay>\r\n </node>"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-e1e47138-00e6-ec9e-4b8f-210111ef0617",
+      "name": "Query Controller For Devices",
+      "request": {
+        "url": " http://10.1.255.136:8181/restconf/operational/network-topology:network-topology/topology/topology-netconf",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n   <node-id>new-netconf-device</node-id>\r\n   <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.0.255.2</host>\r\n   <port xmlns=\"urn:opendaylight:netconf-node-topology\">22</port>\r\n   <username xmlns=\"urn:opendaylight:netconf-node-topology\">netconfadmin</username>\r\n   <password xmlns=\"urn:opendaylight:netconf-node-topology\">$netconf!@admin</password>\r\n   <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n   <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">0</keepalive-delay>\r\n </node>"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-d570bb7f-0202-f0d8-a438-1c3396dbef3d",
+      "name": "Successful Device Add copy",
+      "request": {
+        "url": "http://10.1.255.136:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/new-netconf-device",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n   <node-id>new-netconf-device</node-id>\r\n   <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.0.255.2</host>\r\n   <port xmlns=\"urn:opendaylight:netconf-node-topology\">22</port>\r\n   <username xmlns=\"urn:opendaylight:netconf-node-topology\">netconfadmin</username>\r\n   <password xmlns=\"urn:opendaylight:netconf-node-topology\">$netconf!@admin</password>\r\n   <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n   <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">0</keepalive-delay>\r\n </node>"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-422b35c4-3a9d-0528-75db-110faa6842ad",
+      "name": "Successful Device Add Detailed",
+      "request": {
+        "url": "http://10.1.255.136:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/controller-config/yang-ext:mount/config:modules",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<module xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:config\">\r\n  <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">prefix:sal-netconf-connector</type>\r\n  <name>new-netconf-devicecsr03</name>\r\n  <address xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">10.1.255.39</address>\r\n  <port xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">22</port>\r\n  <username xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">netconfadmin</username>\r\n  <password xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">$netconf!@admin</password>\r\n  <tcp-only xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">false</tcp-only>\r\n  <event-executor xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:netty\">prefix:netty-event-executor</type>\r\n    <name>global-event-executor</name>\r\n  </event-executor>\r\n  <binding-registry xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding\">prefix:binding-broker-osgi-registry</type>\r\n    <name>binding-osgi-broker</name>\r\n  </binding-registry>\r\n  <dom-registry xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:dom\">prefix:dom-broker-osgi-registry</type>\r\n    <name>dom-broker</name>\r\n  </dom-registry>\r\n  <client-dispatcher xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:config:netconf\">prefix:netconf-client-dispatcher</type>\r\n    <name>global-netconf-dispatcher</name>\r\n  </client-dispatcher>\r\n  <processing-executor xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:threadpool\">prefix:threadpool</type>\r\n    <name>global-netconf-processing-executor</name>\r\n  </processing-executor>\r\n  <keepalive-executor xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:threadpool\">prefix:scheduled-threadpool</type>\r\n    <name>global-netconf-ssh-scheduled-executor</name>\r\n  </keepalive-executor>\r\n</module>\r\n"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-cf46e39c-72fc-5b15-d4f6-fb133a240684",
+      "name": "Successful Device Add via NetConf Connectors",
+      "request": {
+        "url": "http://10.1.255.136:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/csr03",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n  <node-id>csr03</node-id>\r\n  <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.1.255.39</host>\r\n  <port xmlns=\"urn:opendaylight:netconf-node-topology\">22</port>\r\n  <username xmlns=\"urn:opendaylight:netconf-node-topology\">netconfadmin</username>\r\n  <password xmlns=\"urn:opendaylight:netconf-node-topology\">$netconf!@admin</password>\r\n  <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n  <!-- non-mandatory fields with default values, you can safely remove these if you do not wish to override any of these values-->\r\n  <reconnect-on-changed-schema xmlns=\"urn:opendaylight:netconf-node-topology\">false</reconnect-on-changed-schema>\r\n  <connection-timeout-millis xmlns=\"urn:opendaylight:netconf-node-topology\">20000</connection-timeout-millis>\r\n  <max-connection-attempts xmlns=\"urn:opendaylight:netconf-node-topology\">0</max-connection-attempts>\r\n  <between-attempts-timeout-millis xmlns=\"urn:opendaylight:netconf-node-topology\">2000</between-attempts-timeout-millis>\r\n  <sleep-factor xmlns=\"urn:opendaylight:netconf-node-topology\">1.5</sleep-factor>\r\n  <!-- keepalive-delay set to 0 turns off keepalives-->\r\n  <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">120</keepalive-delay>\r\n</node>\r\n"
+        },
+        "description": "node-id needs to be updated along with the end of the URL"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-e4e4c273-03c4-d635-93b0-23cc6d5a323c",
+      "name": "Delete a NetConf Connector",
+      "request": {
+        "url": "http://10.1.255.136:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/csr03",
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n   <node-id>new-netconf-device</node-id>\r\n   <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.0.255.2</host>\r\n   <port xmlns=\"urn:opendaylight:netconf-node-topology\">22</port>\r\n   <username xmlns=\"urn:opendaylight:netconf-node-topology\">netconfadmin</username>\r\n   <password xmlns=\"urn:opendaylight:netconf-node-topology\">$netconf!@admin</password>\r\n   <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n   <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">0</keepalive-delay>\r\n </node>"
+        },
+        "description": "end of URL needs to be udpated with node-id"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-e423698f-6f29-a463-d35c-8afc9f4af4f5",
+      "name": "Query existing NetConf Connected Device",
+      "request": {
+        "url": " http://10.1.255.136:8080/restconf/operational/network-topology:network-topology/topology/topology-netconf/node/csr03/yang-ext:mount/",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n   <node-id>new-netconf-device</node-id>\r\n   <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.0.255.2</host>\r\n   <port xmlns=\"urn:opendaylight:netconf-node-topology\">22</port>\r\n   <username xmlns=\"urn:opendaylight:netconf-node-topology\">netconfadmin</username>\r\n   <password xmlns=\"urn:opendaylight:netconf-node-topology\">$netconf!@admin</password>\r\n   <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n   <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">0</keepalive-delay>\r\n </node>"
+        },
+        "description": "Update URL with node-id"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-d24d39a2-b278-582d-2b14-c20602e859f0",
+      "name": "Write config to Cisco Device",
+      "request": {
+        "url": "http://localhost:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/csr03/yang-ext:mount/cisco-ethernet:interface-configurations",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<interface-configuration xmlns=\"http://cisco.com/ns/yang/Cisco-IOS-XR-ifmgr-cfg\">\r\n    <active>act</active>\r\n    <interface-name>mpls</interface-name>\r\n    <description>Interface description</description>\r\n    <bandwidth>32</bandwidth>\r\n    <link-status></link-status>\r\n</interface-configuration>"
+        },
+        "description": "Needs to be updated to IOS-XE"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-01da692e-acf5-fad1-efb8-c8392cbc4118",
+      "name": "K8s Query Controller For Devices",
+      "request": {
+        "url": " http://10.1.255.14:8181/restconf/operational/network-topology:network-topology/topology/topology-netconf",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n   <node-id>new-netconf-device</node-id>\r\n   <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.0.255.2</host>\r\n   <port xmlns=\"urn:opendaylight:netconf-node-topology\">22</port>\r\n   <username xmlns=\"urn:opendaylight:netconf-node-topology\">netconfadmin</username>\r\n   <password xmlns=\"urn:opendaylight:netconf-node-topology\">$netconf!@admin</password>\r\n   <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n   <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">0</keepalive-delay>\r\n </node>"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-67846608-c3b6-5d63-9c38-58a6636f014b",
+      "name": "Netconf-Connector",
+      "request": {
+        "url": "http://54.172.14.15:8080/restconf/config/network-topology:network-topology/topology/topology-netconf/node/controller-config/yang-ext:mount/config:modules",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-e0bf7476-fd25-0660-710d-77ad6112eef8",
+      "name": "Netconf-Connector Post",
+      "request": {
+        "url": "http://54.172.14.15:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/controller-config/yang-ext:mount/config:modules",
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<module xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:config\">\r\n  <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">prefix:sal-netconf-connector</type>\r\n  <name>new-netconf-device</name>\r\n  <address xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">127.0.0.1</address>\r\n  <port xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">830</port>\r\n  <username xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">admin</username>\r\n  <password xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">admin</password>\r\n  <tcp-only xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">false</tcp-only>\r\n  <event-executor xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:netty\">prefix:netty-event-executor</type>\r\n    <name>global-event-executor</name>\r\n  </event-executor>\r\n  <binding-registry xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:binding\">prefix:binding-broker-osgi-registry</type>\r\n    <name>binding-osgi-broker</name>\r\n  </binding-registry>\r\n  <dom-registry xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:dom\">prefix:dom-broker-osgi-registry</type>\r\n    <name>dom-broker</name>\r\n  </dom-registry>\r\n  <client-dispatcher xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:config:netconf\">prefix:netconf-client-dispatcher</type>\r\n    <name>global-netconf-dispatcher</name>\r\n  </client-dispatcher>\r\n  <processing-executor xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:threadpool\">prefix:threadpool</type>\r\n    <name>global-netconf-processing-executor</name>\r\n  </processing-executor>\r\n  <keepalive-executor xmlns=\"urn:opendaylight:params:xml:ns:yang:controller:md:sal:connector:netconf\">\r\n    <type xmlns:prefix=\"urn:opendaylight:params:xml:ns:yang:controller:threadpool\">prefix:scheduled-threadpool</type>\r\n    <name>global-netconf-ssh-scheduled-executor</name>\r\n  </keepalive-executor>\r\n</module>"
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-62af445e-e916-a85f-c475-1d2751341957",
+      "name": "Successful Device Add via NetConf Connectors Current",
+      "request": {
+        "url": "http://54.172.14.15:8181/restconf/config/network-topology:network-topology/topology/topology-netconf/node/useastcsr01",
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n  <node-id>useastcsr01</node-id>\r\n  <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.1.255.5</host>\r\n  <port xmlns=\"urn:opendaylight:netconf-node-topology\">830</port>\r\n  <username xmlns=\"urn:opendaylight:netconf-node-topology\">cisco</username>\r\n  <password xmlns=\"urn:opendaylight:netconf-node-topology\">cisco</password>\r\n  <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n  <!-- non-mandatory fields with default values, you can safely remove these if you do not wish to override any of these values-->\r\n  <reconnect-on-changed-schema xmlns=\"urn:opendaylight:netconf-node-topology\">false</reconnect-on-changed-schema>\r\n  <connection-timeout-millis xmlns=\"urn:opendaylight:netconf-node-topology\">20000</connection-timeout-millis>\r\n  <max-connection-attempts xmlns=\"urn:opendaylight:netconf-node-topology\">0</max-connection-attempts>\r\n  <between-attempts-timeout-millis xmlns=\"urn:opendaylight:netconf-node-topology\">2000</between-attempts-timeout-millis>\r\n  <sleep-factor xmlns=\"urn:opendaylight:netconf-node-topology\">1.5</sleep-factor>\r\n  <!-- keepalive-delay set to 0 turns off keepalives-->\r\n  <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">120</keepalive-delay>\r\n</node>\r\n"
+        },
+        "description": "node-id needs to be updated along with the end of the URL"
+      },
+      "response": []
+    },
+    {
+      "_postman_id": "1212841-1b4065d5-e5cc-9ad9-4f48-64f7d31ce6f4",
+      "name": "Success-Get all nodes",
+      "request": {
+        "url": "http://54.172.14.15:8181/restconf/operational/opendaylight-inventory:nodes/",
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/xml",
+            "description": ""
+          },
+          {
+            "key": "Authorization",
+            "value": "Basic YWRtaW46YWRtaW4=",
+            "description": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "<node xmlns=\"urn:TBD:params:xml:ns:yang:network-topology\">\r\n  <node-id>useastcsr01</node-id>\r\n  <host xmlns=\"urn:opendaylight:netconf-node-topology\">10.1.255.5</host>\r\n  <port xmlns=\"urn:opendaylight:netconf-node-topology\">830</port>\r\n  <username xmlns=\"urn:opendaylight:netconf-node-topology\">cisco</username>\r\n  <password xmlns=\"urn:opendaylight:netconf-node-topology\">cisco</password>\r\n  <tcp-only xmlns=\"urn:opendaylight:netconf-node-topology\">false</tcp-only>\r\n  <!-- non-mandatory fields with default values, you can safely remove these if you do not wish to override any of these values-->\r\n  <reconnect-on-changed-schema xmlns=\"urn:opendaylight:netconf-node-topology\">false</reconnect-on-changed-schema>\r\n  <connection-timeout-millis xmlns=\"urn:opendaylight:netconf-node-topology\">20000</connection-timeout-millis>\r\n  <max-connection-attempts xmlns=\"urn:opendaylight:netconf-node-topology\">0</max-connection-attempts>\r\n  <between-attempts-timeout-millis xmlns=\"urn:opendaylight:netconf-node-topology\">2000</between-attempts-timeout-millis>\r\n  <sleep-factor xmlns=\"urn:opendaylight:netconf-node-topology\">1.5</sleep-factor>\r\n  <!-- keepalive-delay set to 0 turns off keepalives-->\r\n  <keepalive-delay xmlns=\"urn:opendaylight:netconf-node-topology\">120</keepalive-delay>\r\n</node>\r\n"
+        },
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}
